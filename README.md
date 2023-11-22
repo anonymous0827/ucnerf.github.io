@@ -2,7 +2,7 @@
 
 This is the repository that contains source code for the [UC-NeRF website](https://ucnerf.github.io).
 
-If you find Nerfies useful for your work please cite:
+If you find UC-NeRF useful for your work please cite:
 ```
 @article{ucnerf
   author    = {},
