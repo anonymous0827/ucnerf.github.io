@@ -37,6 +37,27 @@
     height: 100%;
     background: #000;
     cursor: ew-resize;
+    z-index: 1;
+}
+
+#slider .arrow-left {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+#slider .arrow-right {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #ffffff;
+  z-index: 2;
 }
 
 .video-container {
