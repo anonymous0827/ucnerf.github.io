@@ -150,12 +150,12 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/anonymous0827/UC-NeRF"
+                <a href="https://github.com/kcheng1021/UC-NeRF"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code(Coming Soon)</span>
+                  <span>Code</span>
                   </a>
               </span>
 
@@ -253,7 +253,10 @@
 <div id="outer-container">
   <div id="container">
     <img id="image1" src="./static/images/ucdemo1.png" />
-    <div id="slider"></div>
+    <div id="slider">
+      <div class="arrow-right">&#9654;</div>
+      <div class="arrow-left">&#9664;</div>
+    </div>
     <img id="image2" src="./static/images/zipdemo1.png" />
   </div>
 </div>
@@ -263,8 +266,10 @@
   <div class="container is-max-desktop">
     <div id="container1">
       <p>
-        180&deg panorama images are rendered above. In under-calibrated multi-camera systems, the NeRF quality significantly degrades, along with color discrepancies, object ghosts, and wrong geometry (the second row). 
-        Our UC-NeRF achieves high-quality rendering and accurate geometry in the challenging cases.
+        180&deg panorama images are rendered above. In under-calibrated multi-camera systems, the NeRF quality significantly degrades, along with color discrepancies, object ghosts, and wrong geometry. 
+        Our UC-NeRF achieves high-quality rendering and accurate geometry in the challenging cases. <strong style="color: blue";> 
+        （Slide the white line to compare the results between zipnerf and ours.）
+        </strong>
       </p>
     </div>
   </div>
@@ -299,8 +304,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="./static/videos/paper_demo.mp4"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <video src="./static/videos/single_camera.mp4" autoplay controls muted loop playsinline></video>
         </div>
       </div>
     </div>
@@ -318,20 +322,55 @@
 
     </div>
 
-    <!--/ Re-rendering. -->
-  <h3 class="title is-4">Re-rendering in Novel Paranoma Views</h3>
-  <p>
+   <!--/ Re-rendering. -->
+   <h3 class="title is-4">Rendering Comparison</h3>
+   <p>
+    Our UC-NeRF(left); Zip-NeRF(right).
     <strong style="color: blue";> 
     Note that no depth supervision used in our UC-NeRF.
     </strong>
   </p>
+   <section class="hero is-light is-small">
+     <div class="hero-body">
+       <div class="container">
+          <div class="video-container">
+            <video width="320" height="240" autoplay controls muted loop playsinline>
+              <source src="./static/videos/398_uc.mp4" type="video/mp4">
+            </video>
+            <video width="320" height="240" autoplay controls muted loop playsinline>
+              <source src="./static/videos/398_zip.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-container">
+            <video width="320" height="240" autoplay controls muted loop playsinline>
+              <source src="./static/videos/100_uc.mp4" type="video/mp4">
+            </video>
+            <video width="320" height="240" autoplay controls muted loop playsinline>
+              <source src="./static/videos/100_zip.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <br>
+
+          <p>More Comparison</p>
+           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+             <source src="./static/videos/more_compare.mp4"
+                     type="video/mp4">
+           </video>
+       </div>
+     </div>
+   </section>
+   <br>
+
+    <!--/ Re-rendering. -->
+  <h3 class="title is-4">Re-rendering in Novel Paranoma Views</h3>
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+          <!-- <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/1006final.mp4"
                     type="video/mp4">
-          </video>
+          </video> -->
 
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/113final.mp4"
@@ -344,18 +383,79 @@
           </video>
 
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/34final.mp4"
-                    type="video/mp4">
-          </video>
-
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/1502_final.mp4"
                     type="video/mp4">
           </video>
+
+          <!-- <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/34final.mp4"
+                    type="video/mp4">
+          </video> -->
+
+          <!-- <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/1502_final.mp4"
+                    type="video/mp4">
+          </video> -->
       </div>
     </div>
   </section>
   <br>
+
+    <!--/ Color correction -->
+    <h3 class="title is-4">Comparison of Color Correction Strategy</h3>
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/color_correction.mp4"
+                      type="video/mp4">
+            </video>
+  
+            <!-- <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/113final.mp4"
+                      type="video/mp4">
+            </video>
+  
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/150final.mp4"
+                      type="video/mp4">
+            </video>
+  
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/34final.mp4"
+                      type="video/mp4">
+            </video>
+  
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/1502_final.mp4"
+                      type="video/mp4">
+            </video> -->
+        </div>
+      </div>
+    </section>
+    <br>
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Blurring caused by multi-camera pose errors</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <p>
+              Errors from the relative transformation of different cameras can cause blurring. UC-NeRF can alleviate these artifacts. 
+          </p>
+        </div>
+
+        <div class="title is-4">
+            <img src="./static/images/blurring.png" style="display: block; margin-left: auto; margin-right: auto; width: 90%;"/>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+      </div>
+    </div>
+    <!--/ Animation. -->
 
     <!-- Animation. -->
     <div class="columns is-centered">
@@ -372,7 +472,7 @@
             We then train the model by combining the original real images and the new synthesized images (VA-DepthNet*).
             As Tab.1 illustrates, the accuracy of the estimated depth is improved with such a data augmentation. 
             Fig.1 also shows such an operation leads to sharper edges and more accurate predictions.
-            It shows great potential of generating more training images for large perception model, such as <a href=https://github.com/YvanYin/Metric3D>Metric3D</a>.
+            <strong style="color: blue";> It shows great potential of generating more training images for large perception model, such as <a href=https://github.com/YvanYin/Metric3D>Metric3D</a>.</strong>
           </p>
         </div>
         <div class="title is-4">
@@ -389,8 +489,8 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{ucnerf,
-  author    = {Anonymous},
+    <pre><code>@article{kchenguc23,
+  author    = {Kai Cheng, Xiaoxiao Long, Wei Yin, Jin Wang, Zhiqiang Wu, Yuexin Ma, Kaixuan Wang, Xiaozhi Chen, Xuejin Chen},
   title     = {UC-NeRF},
   journal   = {arxiv},
   year      = {2023},
