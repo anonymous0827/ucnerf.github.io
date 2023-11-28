@@ -26,16 +26,16 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    clip: rect(0, 480px, 320px, 0);
+    clip: rect(0, 350px, 320px, 0);
 }
 
 #slider {
     position: absolute;
     top: 0;
-    left: 480px;
+    left: 350px;
     width: 5px;
     height: 100%;
-    background: #000;
+    background: #ffffff;
     cursor: ew-resize;
     z-index: 1;
 }
